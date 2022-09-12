@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import pl.coderslab.bookapispringboot.utils.DBUtill;
 
@@ -23,6 +24,11 @@ public class AppConfig implements WebMvcConfigurer {
         db.setDB_SERVER_URL("jdbc:mysql://localhost:3306/BookAPI");
         db.setDB_PARAMS("?useSSL=false&serverTimezone=UTC&characterEncoding=utf8&allowPublicKeyRetrieval=true");
         return db;
+    }
+
+    @Override
+    public void configureViewResolvers(ViewResolverRegistry registry) {
+        registry.jsp("/WEB-INF/views/",".jsp");
     }
 
 }
