@@ -1,22 +1,21 @@
-package pl.coderslab.bookapispringboot.controllers;
+package pl.coderslab.bookapispringboot.web.mvc.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
 
     @GetMapping({"/", ""})
-    @ResponseBody
     public String home() {
-        return "home";
+        return "/static/home";
     }
 
     @GetMapping("/about")
-    @ResponseBody
     public String about() {
-        return "Here you can find some details for logged users";
+        return "/static/about";
     }
 
 }

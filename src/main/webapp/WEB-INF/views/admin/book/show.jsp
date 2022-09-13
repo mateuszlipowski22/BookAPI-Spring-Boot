@@ -1,26 +1,15 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: mateusz
-  Date: 12.09.2022
-  Time: 22:15
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<jsp:include page="/WEB-INF/views/static/header.jsp"/>
 
 
 <div class="hero-body">
     <div class="container has-text-centered">
-        <p class="title">
-            Book Details
-        </p>
-    </div>
-    <div class="table-container">
+        <div class="container has-text-centered">
+            <p class="title">
+                Book Details<br>
+            </p>
+        </div>
         <table class="table is-fullwidth is-bordered">
             <thead>
             <tr>
@@ -29,7 +18,8 @@
                 <th>Author</th>
                 <th>Type</th>
                 <th>Publisher</th>
-                <th>isbn</th>
+                <th>ISBN</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -40,23 +30,31 @@
                 <td>${book.type}</td>
                 <td>${book.publisher}</td>
                 <td>${book.isbn}</td>
-            <tr>
+                <td>
+                    <nav class="navbar">
+                        <div class="container">
+                            <div class="navbar-menu">
+                                <a href="/admin/book/${book.id}/edit">
+                                    <button type="submit" class="button button is-primary">Edit</button>
+                                </a>
+                            </div>
+                            <div class="navbar-menu">
+                                <a href="/admin/book/${book.id}/delete">
+                                    <button type="submit" class="button button is-primary">Delete</button>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </td>
             </tr>
             </tbody>
         </table>
-    </div>
-    <div class="container has-text-centered">
-        <form method="get" action="/admin/book/list">
-            <button type="submit" class="button is-link">Show book list</button>
-        </form>
-        <form method="get" action="/admin/book/${book.id}/edit">
-            <button type="submit" class="button is-link">Edit</button>
-        </form>
-        <form method="get" action="/admin/book/${book.id}/delete">
-            <button type="submit" class="button is-link">Delete</button>
-        </form>
+        <div class="container has-text-centered">
+            <form method="get" action="/admin/book/list">
+                <button type="submit" class="button is-link">Show book list</button>
+            </form>
+        </div>
     </div>
 </div>
 
-</body>
-</html>
+<jsp:include page="/WEB-INF/views/static/footer.jsp"/>

@@ -1,26 +1,17 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: mateusz
-  Date: 12.09.2022
-  Time: 21:47
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<jsp:include page="/WEB-INF/views/static/header.jsp"/>
 
 
 <div class="hero-body">
     <div class="container has-text-centered">
-        <p class="title">
-            All books
-        </p>
-    </div>
-    <div class="table-container">
+        <div class="container has-text-centered">
+            <p class="title">
+                All books<br>
+                <br>
+            </p>
+        </div>
         <table class="table is-fullwidth is-bordered">
             <thead>
             <tr>
@@ -33,7 +24,7 @@
             <tbody>
             <c:forEach var="book" items="${books}" varStatus="loop">
                 <tr>
-                    <td>${loop.count}<td>
+                    <td>${loop.count}</td>
                     <td>${book.title}</td>
                     <td>${book.author}</td>
                     <td>
@@ -44,7 +35,7 @@
                                 </div>
                             </div>
                         </nav>
-                    <tr>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -53,5 +44,4 @@
 </div>
 
 
-</body>
-</html>
+<jsp:include page="/WEB-INF/views/static/footer.jsp"/>
