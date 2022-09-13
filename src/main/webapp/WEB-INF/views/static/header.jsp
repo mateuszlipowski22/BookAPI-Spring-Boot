@@ -72,7 +72,7 @@
                                     <li>
                                         <a>
                                             <form action="<c:url value="/logout"/>" method="post">
-                                                <input type="submit" value="Wyloguj" class="button is-link">
+                                                <input type="submit" value="Logout" class="button is-link">
                                                 <input type="hidden" name="${_csrf.parameterName}"
                                                        value="${_csrf.token}"/>
                                             </form>
