@@ -11,7 +11,7 @@
             </p>
         </div>
         <table class="table is-fullwidth is-bordered">
-            <form:form modelAttribute="book" method="post" action="/admin/book/add">
+            <form:form modelAttribute="bookDto" method="post" action="/admin/book/add">
                 <div class="field">
                     <label class="label">Title</label>
                     <div>

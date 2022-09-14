@@ -51,6 +51,7 @@
                                 <sec:authorize access="hasRole('ADMIN')">
                                     <li><a href="/admin/book/list">Book List</a></li>
                                     <li><a href="/admin/book/add">Add Book</a></li>
+                                    <li><a href="/admin/user/list">User List</a></li>
                                 </sec:authorize>
                                 <li><a href="/about">About</a></li>
 

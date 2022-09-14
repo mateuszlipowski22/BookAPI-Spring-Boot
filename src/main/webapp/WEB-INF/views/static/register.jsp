@@ -11,36 +11,59 @@
                 <td>
                     <div class="container has-text-centered">
                         <p class="title">
-                            Register<br>
+                            Register new user<br>
                             <br>
                         </p>
                     </div>
 
-<%--                    <form method="post">--%>
-<%--                        <div class="field">--%>
-<%--                            <label class="label">User Name:</label>--%>
-<%--                            <div>--%>
-<%--                                <input type="text" name="username" class="input"/>--%>
-<%--                            </div>--%>
-<%--                            <div>--%>
-<%--                                &lt;%&ndash;                        <form:errors path="title"></form:errors>&ndash;%&gt;--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                        <div class="field">--%>
-<%--                            <label class="label">Password:</label>--%>
-<%--                            <div>--%>
-<%--                                <input type="password" name="password" class="input"/>--%>
-<%--                            </div>--%>
-<%--                            <div>--%>
-<%--                                &lt;%&ndash;                        <form:errors path="title"></form:errors>&ndash;%&gt;--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>--%>
-<%--                        <br>--%>
-<%--                        <div>--%>
-<%--                            <input type="submit" class="button is-link" value="Submit"/>--%>
-<%--                        </div>--%>
-<%--                    </form>--%>
+                    <form:form modelAttribute="registrationFormDTO" method="post" action="/register">
+                        <div class="field">
+                            <label class="label">User Name:</label>
+                            <div>
+                                <form:input path="username" cssClass="input"></form:input>
+                            </div>
+                            <div>
+                                 <form:errors path="username"></form:errors>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Email address:</label>
+                            <div>
+                                <form:input path="email" cssClass="input"></form:input>
+                            </div>
+                            <div>
+                                <form:errors path="email"></form:errors>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Password:</label>
+                            <div>
+                                <form:password path="password" cssClass="input"></form:password>
+                            </div>
+                            <div>
+                                <form:errors path="password"></form:errors>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Repeat Password:</label>
+                            <div>
+                                <form:password path="password2" cssClass="input"></form:password>
+                            </div>
+                            <div>
+                                <form:errors path="password2"></form:errors>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label"><form:checkbox path="confirmation" cssClass="checkbox"></form:checkbox>I agree to the terms and conditions </label>
+                            <div>
+                                <form:errors path="confirmation"></form:errors>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="submit" class="button is-link" value="Register"/>
+                        </div>
+                    </form:form>
                 </td>
             </tr>
         </table>
