@@ -66,7 +66,7 @@
 
                                 <sec:authorize access="isAuthenticated()">
                                     <li>
-                                        <a>
+                                        <a href="/user/details/show">
                                             Logged as: <sec:authentication property="principal.username"/>
                                         </a>
                                     </li>

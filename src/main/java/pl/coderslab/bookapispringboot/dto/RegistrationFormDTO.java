@@ -30,4 +30,13 @@ public class RegistrationFormDTO {
     @AssertTrue
     private boolean confirmation;
 
+    private String city;
+
+    private String street;
+
+    private String houseNumber;
+
+    private String phoneNumber;
+
+    private String aboutMe;
 }

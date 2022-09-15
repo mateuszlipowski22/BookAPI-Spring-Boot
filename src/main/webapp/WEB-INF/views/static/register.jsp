@@ -59,6 +59,53 @@
                                 <form:errors path="confirmation"></form:errors>
                             </div>
                         </div>
+
+                        <div class="field">
+                            <label class="label">City:</label>
+                            <div>
+                                <form:input path="city" cssClass="input"></form:input>
+                            </div>
+                            <div>
+                                <form:errors path="city"></form:errors>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Street:</label>
+                            <div>
+                                <form:input path="street" cssClass="input"></form:input>
+                            </div>
+                            <div>
+                                <form:errors path="street"></form:errors>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">House Number:</label>
+                            <div>
+                                <form:input path="houseNumber" cssClass="input"></form:input>
+                            </div>
+                            <div>
+                                <form:errors path="houseNumber"></form:errors>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Phone Number:</label>
+                            <div>
+                                <form:input path="phoneNumber" cssClass="input"></form:input>
+                            </div>
+                            <div>
+                                <form:errors path="phoneNumber"></form:errors>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">About Me:</label>
+                            <div>
+                                <form:input path="aboutMe" cssClass="input"></form:input>
+                            </div>
+                            <div>
+                                <form:errors path="aboutMe"></form:errors>
+                            </div>
+                        </div>
+
                         <br>
                         <div>
                             <input type="submit" class="button is-link" value="Register"/>

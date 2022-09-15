@@ -12,7 +12,7 @@
                 <br>
             </p>
         </div>
-        <form:form modelAttribute="bookDto" method="post" action="/admin/book/add">
+        <form:form modelAttribute="bookDto" method="post" action="/admin/book/${bookDto.id}/edit">
             <div class="field">
                 <label class="label">Title</label>
                 <div>

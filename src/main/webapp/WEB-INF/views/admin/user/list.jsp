@@ -17,6 +17,7 @@
             <tr>
                 <th>Num</th>
                 <th>User name</th>
+                <th>Email</th>
                 <th>Active</th>
                 <th>Actions</th>
             </tr>
@@ -26,6 +27,7 @@
                 <tr>
                     <td>${loop.count}</td>
                     <td>${user.username}</td>
+                    <td>${user.email}</td>
                     <td>${user.enabled}</td>
                     <td>
                         <nav class="navbar">
