@@ -16,11 +16,11 @@ import java.util.List;
 @Profile("DB")
 public class DBBookService implements BookService {
 
-    public final String INSERT_BOOK_QUERY="INSERT INTO BookAPI.books (isbn, title, author, publisher, type) VALUES (?,?,?,?,?);";
-    public final String DELETE_BOOK_BY_ID_QUERY="DELETE FROM BookAPI.books WHERE id=?;";
-    public final String SELECT_BOOKS_QUERY="SELECT id, isbn, title, author, publisher, type FROM BookAPI.books;";
-    public final String SELECT_BOOK_BY_ID_QUERY="SELECT id, isbn, title, author, publisher, type FROM BookAPI.books WHERE id=?;";
-    public final String UPDATE_BOOK_QUERY="UPDATE BookAPI.books SET isbn=?, title=?, author=?, publisher=?, type=? WHERE id=?;";
+    public final String INSERT_BOOK_QUERY="INSERT INTO BookAPI.book (isbn, title, author, publisher, type) VALUES (?,?,?,?,?);";
+    public final String DELETE_BOOK_BY_ID_QUERY="DELETE FROM BookAPI.book WHERE id=?;";
+    public final String SELECT_BOOKS_QUERY="SELECT id, isbn, title, author, publisher, type FROM BookAPI.book;";
+    public final String SELECT_BOOK_BY_ID_QUERY="SELECT id, isbn, title, author, publisher, type FROM BookAPI.book WHERE id=?;";
+    public final String UPDATE_BOOK_QUERY="UPDATE BookAPI.book SET isbn=?, title=?, author=?, publisher=?, type=? WHERE id=?;";
 
     private final DBUtill dbUtill;
 

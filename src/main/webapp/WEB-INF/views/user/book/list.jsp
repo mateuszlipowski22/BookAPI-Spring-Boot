@@ -34,6 +34,11 @@
                                     <a href="${book.id}/show"><button type="submit" class="button button is-primary">Show Details</button></a>
                                 </div>
                             </div>
+                            <div class="container">
+                                <div class="navbar-menu">
+                                    <a href="${book.id}/add"><button type="submit" class="button button is-primary">Add to my list</button></a>
+                                </div>
+                            </div>
                         </nav>
                     </td>
                 </tr>

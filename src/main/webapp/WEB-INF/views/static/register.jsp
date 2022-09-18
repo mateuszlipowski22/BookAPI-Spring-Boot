@@ -8,14 +8,17 @@
     <div>
         <table class="table is-fullwidth is-bordered">
             <tr>
-                <td>
+                <th colspan="2">
                     <div class="container has-text-centered">
                         <p class="title">
                             Register new user<br>
                             <br>
                         </p>
                     </div>
-
+                </th>
+            </tr>
+            <tr>
+                <td>
                     <form:form modelAttribute="registrationFormDTO" method="post" action="/register">
                         <div class="field">
                             <label class="label">User Name:</label>
@@ -53,13 +56,8 @@
                                 <form:errors path="password2"></form:errors>
                             </div>
                         </div>
-                        <div class="field">
-                            <label class="label"><form:checkbox path="confirmation" cssClass="checkbox"></form:checkbox>I agree to the terms and conditions </label>
-                            <div>
-                                <form:errors path="confirmation"></form:errors>
-                            </div>
-                        </div>
-
+                </td>
+                <td>
                         <div class="field">
                             <label class="label">City:</label>
                             <div>
@@ -106,7 +104,16 @@
                             </div>
                         </div>
 
-                        <br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="field">
+                        <label class="label"><form:checkbox path="confirmation" cssClass="checkbox"></form:checkbox>I agree to the terms and conditions </label>
+                        <div>
+                            <form:errors path="confirmation"></form:errors>
+                        </div>
+                    </div>
                         <div>
                             <input type="submit" class="button is-link" value="Register"/>
                         </div>

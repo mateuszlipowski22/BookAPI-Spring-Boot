@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import pl.coderslab.bookapispringboot.dto.BookDto;
 import pl.coderslab.bookapispringboot.models.Book;
 import pl.coderslab.bookapispringboot.models.User;
+import pl.coderslab.bookapispringboot.repositories.RoleRepository;
 import pl.coderslab.bookapispringboot.repositories.UserRepository;
 
 import javax.validation.Valid;
@@ -19,14 +20,17 @@ import javax.validation.Valid;
 public class AdminUserController {
 
     private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
 
-    public AdminUserController(UserRepository userRepository) {
+
+    public AdminUserController(UserRepository userRepository, RoleRepository roleRepository) {
         this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
     }
 
     @GetMapping("list")
     public String showUsersList(Model model){
-        model.addAttribute("users", userRepository.findAll());
+        model.addAttribute("users", userRepository.findAllByRolesContaining(roleRepository.findByName("ROLE_USER")));
         return "admin/user/list";
     }
 
